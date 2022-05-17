@@ -4,6 +4,7 @@
   padding: 10px 15px;
   border-radius: 20px;
   background-color: #c2e297;
+  cursor: grab;
 }
 
 .card:not(:last-child) {

@@ -75,6 +75,7 @@ function TasksColumn({ title, changeTaskForDelete, taskForDelete }) {
           dispatch(changeCurrentModalColumn(title));
         }}
         className={style.button}
+        type="button"
       >
         Click to add task
       </button>
