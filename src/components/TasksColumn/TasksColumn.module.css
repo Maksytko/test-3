@@ -1,0 +1,41 @@
+.column {
+  width: 500px;
+  height: 900px;
+  background: #ffb8ca;
+  border-radius: 24px;
+}
+
+.column:not(:last-child) {
+  margin-right: 60px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  padding: 0px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: 0px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #d41443;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}

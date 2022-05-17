@@ -8,6 +8,7 @@ import {
   changeCurrentModalColumn,
   changeModalStatus,
 } from "../../redux/actions";
+import style from "./TasksColumn.module.css";
 
 function TasksColumn({ title, changeTaskForDelete, taskForDelete }) {
   const dispatch = useDispatch();
@@ -66,9 +67,18 @@ function TasksColumn({ title, changeTaskForDelete, taskForDelete }) {
   );
 
   return (
-    <div ref={drop}>
-      <p>{title}</p>
-      <ul>
+    <div ref={drop} className={style.column}>
+      <p className={style.title}>{title}</p>
+      <button
+        onClick={() => {
+          dispatch(changeModalStatus());
+          dispatch(changeCurrentModalColumn(title));
+        }}
+        className={style.button}
+      >
+        Click to add task
+      </button>
+      <ul className={style.list}>
         {cards?.map((card, i) => (
           <TaskCard
             id={card.id}
@@ -82,14 +92,6 @@ function TasksColumn({ title, changeTaskForDelete, taskForDelete }) {
           />
         ))}
       </ul>
-      <button
-        onClick={() => {
-          dispatch(changeModalStatus());
-          dispatch(changeCurrentModalColumn(title));
-        }}
-      >
-        Click to add task
-      </button>
     </div>
   );
 }

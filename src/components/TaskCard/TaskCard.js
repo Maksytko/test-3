@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useDrag, useDrop } from "react-dnd";
+import style from "./TaskCard.module.css";
 
 function TaskCard({
   id,
@@ -76,9 +77,10 @@ function TaskCard({
         opacity: isDragging ? 0 : 1,
       }}
       data-handler-id={handlerId}
+      className={style.card}
     >
-      <p>{title}</p>
-      <p>{description}</p>
+      <p className={style.text}>{title}</p>
+      <p className={style.text}>{description}</p>
     </li>
   );
 }

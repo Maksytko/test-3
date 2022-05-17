@@ -1,0 +1,5 @@
+.section {
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+}

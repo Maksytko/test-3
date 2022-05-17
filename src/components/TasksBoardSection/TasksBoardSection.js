@@ -7,6 +7,7 @@ import { setCards, setColumns } from "../../redux/actions";
 import { getColumns, getModalStatus } from "../../redux/selectors";
 import Modal from "../Modal/Modal";
 import TasksColumn from "../TasksColumn/TasksColumn";
+import style from "./TasksBoardSection.module.css";
 
 function TasksBoardSection() {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ function TasksBoardSection() {
 
   return (
     <DndProvider backend={HTML5Backend}>
-      <section>
+      <section className={style.section}>
         {columns.map((column) => (
           <TasksColumn
             title={column}
